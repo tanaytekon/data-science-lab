@@ -20,6 +20,8 @@ The dataset used in this project consists of over one million records with 21 un
 - **Data Cleaning:** Categorical features, such as "INTUBED" and "PATIENT_TYPE," were cleaned and encoded to make them suitable for machine learning algorithms.
 - **Class Imbalance:** The dataset exhibited a significant class imbalance in the target variable. This was handled using class-weight adjustments.
 
+  ![alt text](./img/target_dist.png)
+
 ## Exploratory Data Analysis (EDA)
 
 EDA was performed to gain insights into the dataset, visualize feature distributions, and understand relationships between different variables. Visualizations were created using Seaborn and Matplotlib.
@@ -32,8 +34,16 @@ EDA was performed to gain insights into the dataset, visualize feature distribut
 Clustering analysis and Principal Component Analysis (PCA) were applied to explore the dataset further:
 
 - **Clustering Analysis:** An unsupervised learning technique, **Agglomerative Clustering** were applied to identify natural groupings within the data. Number of clusters determined as 4, by using elbow method. This analysis provided additional insights into the underlying patterns and helped in understanding patient segments.
+
+  ![alt text](./img/elbow_curve.png)
+
 - **PCA:** PCA was applied to reduce the dimensionality of the dataset, making it easier to visualize and analyze. Dimensionality was reduced the 3D for visualization.
-- **Visualization of Clusters:** Clusters were visualized on dimensionally reduced data. The distribution and formation of the clusters on each feature with the target variable were also shown. 
+
+  ![alt text](./img/clustering_pca.png)
+
+- **Visualization of Clusters:** Clusters were visualized on dimensionally reduced data. The distribution and formation of the clusters on each feature with the target variable were also shown.
+
+  ![alt text](./img/cluster_profiles.png)
 
 ## Modeling and Evaluation
 
@@ -51,7 +61,12 @@ The class imbalance issue was addressed by:
 - **Recall, Specificity:** To evaluate the percentage of correct predictions among the data that have the same predicted class.
 - **Precision, False Positive Rate:** To evaluate the percentage of correct predictions among the data that have the same ground truth class.
 - **ROC-AUC and Precision-Recall AUC Scores:** To assess the model's ability to distinguish between classes.
+
+  ![alt text](./img/roc.png)
+  ![alt text](./img/pr.png)
 - **Confusion Matrix:** Confusion matrices of both models, before and after hyperparameter tuning, were visually investigated, and the results of the above evaluation metrics were discussed in detail.
+
+  ![alt text](./img/cm.png)
 
 
 ## Results Interpretation
